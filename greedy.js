@@ -2,9 +2,9 @@ const items = buildItems()
 console.log("Сортировка по удельной цене даёт:")
 testGreedy(items, 20, cmpDencity)
 
-function cmpDencity(itemA, itemB)
+function cmpDencity(a, b)
 {
-	const r = itemA.value - itemB.value
+	const r = a.value/a.weight - b.value/b.weight
 	return r
 }
 
@@ -51,4 +51,5 @@ function buildItems()
 	}
 	return items
 }
+
 
